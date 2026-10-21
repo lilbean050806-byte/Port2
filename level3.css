@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    /* full-screen splash background */
+    background: #000 url("assets/images/splash.jpg") center/cover no-repeat fixed;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  /* Make the p5 canvas cover the viewport */
+  canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+}
+
