@@ -1,0 +1,39 @@
+{
+  "waves": [
+    {
+      "spawnAt": 1600,
+      "enemies": [
+        { "speed": 1.2 },
+        { "speed": 1.3 },
+        { "speed": 1.4 }
+      ]
+    },
+    {
+      "spawnAt": 1000,
+      "enemies": [
+        { "speed": 1.5 },
+        { "speed": 1.4 },
+        { "speed": 1.5 },
+        { "speed": 1.4 }
+      ]
+    },
+    {
+      "spawnAt": 500,
+      "enemies": [
+        { "speed": 1.8 },
+        { "speed": 1.9 },
+        { "speed": 1.8 },
+        { "speed": 1.9 },
+        { "speed": 2.0 }
+      ]
+    }
+  ],
+  "boss": {
+    "retreatY": 150,
+    "r": 60,
+    "health": 23, 
+    "chargeSpeed": 6,
+    "retreatSpeed": 2,
+    "chargePause": 90
+  }
+}
