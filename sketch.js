@@ -650,7 +650,7 @@ function drawIntroCutsceneOverlay() {
 let introVideo;                 // p5.MediaElement for the opening cutscene
 let introVideoReady = false;    // true once the video element is loaded
 let introVideoEnded = false;    // guards against onended firing more than once
-const INTRO_VIDEO_PATH = "assets/images/opening_cutscene.mp4";
+const INTRO_VIDEO_PATH = "opening_cutscene.mp4";
 const INTRO_SKIP_HINT_DELAY = 60; // frames before the "press to skip" hint appears
 
 /* ============================================================
@@ -713,7 +713,7 @@ const SCAVENGE_DUMPSTER_SIZE   = 110;
 const SCAVENGE_DUMPSTER_RADIUS = 90; // how close the player needs to be to search one
 const DUMPSTER_ITEM_VISIBLE_MS = 400; // how long a found item stays on screen before fading
 
-// Scattered junk sprite sheet (assets/images/junkitems.png), 8
+// Scattered junk sprite sheet (junkitems.png), 8
 // columns x 7 rows of loose items (bags, boxes, cans, photos,
 // tools, etc.). Still used by Week 1's obstacle art; Week 2's
 // sewer maze now uses real named item images instead (see the
@@ -871,65 +871,65 @@ let sewerDoorOpenImage;
 let sewerFloor;
 
 function preload() {
-  sewerDoorClosedImage = loadImage("assets/images/tunnelClosed.png");
-  sewerDoorOpenImage   = loadImage("assets/images/tunnelOpen.png");
-  enemyData    = loadJSON("data/enemies.json");
-  obstacleData = loadJSON("data/obstacles.json");
-  playerSheet  = loadImage("assets/images/paperspleasecharacterspritesheet.png");
-  bgImage      = loadImage("assets/images/paperspleasebackground.png");
-  boardImage   = loadImage("assets/images/Bulletinboard.png");
-  bunkerImage  = loadImage("assets/images/bunkerimg.png");
+  sewerDoorClosedImage = loadImage("tunnelClosed.png");
+  sewerDoorOpenImage = loadImage("tunnelOpen.png");
+  enemyData = loadJSON("enemies.json");
+  obstacleData = loadJSON("obstacles.json");
+  playerSheet = loadImage("paperspleasecharacterspritesheet.png");
+  bgImage = loadImage("paperspleasebackground.png");
+  boardImage = loadImage("Bulletinboard.png");
+  bunkerImage = loadImage("bunkerimg.png");
 
-music      = loadSound("assets/sounds/papersplease.mp3");
+  music = loadSound("papersplease.mp3");
 sirenSound = music; // same audio, no need to load it twice
   // AUDIO — new dark-suspense background track. Loaded separately
   // from the legacy `music` variable so nothing else needs to
   // change; `music` is kept around in case it's still referenced
   // elsewhere, but the game now plays `bgMusic` (see
   // startBackgroundMusic()).
-  bgMusic        = loadSound("assets/sounds/backgroundMusic.mp3");
+  bgMusic = loadSound("backgroundMusic.mp3");
   // AUDIO — cop siren, now volume-managed by updateCopSiren()
   // instead of playing at a flat, overly loud level.
 
-  playerHitSound = loadSound("assets/sounds/playerhit.wav");
-  shootSound     = loadSound("assets/sounds/shoot.wav");
-  eyeImage       = loadImage("assets/images/eye.png");
-  copImage       = loadImage("assets/images/cop.png");
-  pickupSound    = loadSound("assets/sounds/pickup.mp3");
+  playerHitSound = loadSound("playerhit.wav");
+  shootSound = loadSound("shoot.wav");
+  eyeImage = loadImage("eye.png");
+  copImage = loadImage("cop.png");
+  pickupSound = loadSound("pickup.mp3");
   
 
-  wire         = loadImage("assets/images/wire.png");
-  water        = loadImage("assets/images/water.png");
-  watch        = loadImage("assets/images/watch.png");
-  tape         = loadImage("assets/images/tape.png");
-  survivorNote = loadImage("assets/images/survivornote.png");
-  radio        = loadImage("assets/images/radio.png");
-  notes        = loadImage("assets/images/notes.png");
-  medkit       = loadImage("assets/images/medki.png");
-  lighter      = loadImage("assets/images/lighter.png");
-  food         = loadImage("assets/images/food.png");
-  homeImage        = loadImage("assets/images/home.png");
-  SubScreen        = loadImage("assets/images/SubScreen.png");
+  wire = loadImage("wire.png");
+  water = loadImage("water.png");
+  watch = loadImage("watch.png");
+  tape = loadImage("tape.png");
+  survivorNote = loadImage("survivornote.png");
+  radio = loadImage("radio.png");
+  notes = loadImage("notes.png");
+  medkit = loadImage("medki.png");
+  lighter = loadImage("lighter.png");
+  food = loadImage("food.png");
+  homeImage = loadImage("home.png");
+  SubScreen = loadImage("SubScreen.png");
 
-  wifeSheet = loadImage("assets/images/deadwife.png");
+  wifeSheet = loadImage("deadwife.png");
 
   // Week 1 dumpster art (searchable dumpsters in the free-roam level)
-  dumpsterImage     = loadImage("assets/images/dumpster.png");
-  dumpsterOpenImage = loadImage("assets/images/dumpsterOpenImage.png");
+  dumpsterImage = loadImage("dumpster.png");
+  dumpsterOpenImage = loadImage("dumpsterOpenImage.png");
 
   // Scattered junk items sprite sheet — used for Week 1 obstacle
   // art.
-  itemSheet = loadImage("assets/images/junkitems.png");
+  itemSheet = loadImage("junkitems.png");
 
   // Week 3 — Abandoned Police Office platformer assets
   // (policeStationBG / bg from the standalone test build).
   // Falls back to bunkerEnterImage / bgImage in drawWeek3Level()
   // and drawWeek3EntranceScreen() if these files aren't present.
-  week3BackgroundImage   = loadImage("assets/images/background.png");
-  week3EntranceBgImage   = loadImage("assets/images/bg.png");
+  week3BackgroundImage = loadImage("background.png");
+  week3EntranceBgImage = loadImage("bg.png");
 
   // Week 2 sewer maze floor texture
-  sewerFloor = loadImage("assets/images/sewerFloor.png");
+  sewerFloor = loadImage("sewerFloor.png");
 
 function loadOk() {}
 function loadFail(name) {
@@ -2328,7 +2328,7 @@ function mousePressed() {
 
 /* ============================================================
    Opening cutscene functions
-   Plays assets/videos/opening_cutscene.mp4 between the main
+   Plays opening_cutscene.mp4 between the main
    splash (STATE_HOME) and the sub screen (STATE_SUBSCREEN).
    ============================================================ */
 

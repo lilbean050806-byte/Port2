@@ -294,117 +294,111 @@ const TUTORIAL_TYPE_SPEED = 2;
 
 function preload() {
 
-  doorOpenSound = loadSound("assets/sounds/dooropen.mp3");
-doorCloseSound = loadSound("assets/sounds/doorclose.mp3");
+  doorOpenSound = loadSound("dooropen.mp3");
+  doorCloseSound = loadSound("doorclose.mp3");
 bgMusic =
   loadSound(
-    "assets/sounds/backgroundMusic.mp3"
+    "backgroundMusic.mp3"
   );
   sirenSound =
   loadSound(
-    "assets/sounds/papersplease.mp3"
+    "papersplease.mp3"
   );
 
   playerSheet = loadImage(
-    "assets/images/paperspleasecharacterspritesheet.png"
+    "paperspleasecharacterspritesheet.png"
   );
 
   copImage = loadImage(
-    "assets/images/cop.png"
+    "cop.png"
   );
 
   eyeImage = loadImage(
-    "assets/images/eye.png"
+    "eye.png"
   );
 
   policeFloorImg = loadImage(
-    "assets/images/policeFloorImg.png"
+    "policeFloorImg.png"
   );
 
   /* ---------------- DOORS ---------------- */
 
   doorOpenImg = loadImage(
-    "assets/images/doorOpen.png"
+    "doorOpen.png"
   );
 
 
   doorClosedImg = loadImage(
-    "assets/images/doorClosed.png"
+    "doorClosed.png"
   );
 
   /* ---------------- WIFE---------------- */
  deadWifeImg = loadImage(
-  "assets/images/deadwife.png"
+  "deadwife.png"
 );
 
   /* ---------------- ITEMS ---------------- */
 
   itemImages.wire = loadImage(
-    "assets/images/wire.png"
+    "wire.png"
   );
 
 
   itemImages.water = loadImage(
-    "assets/images/water.png"
+    "water.png"
   );
 
 
   itemImages.watch = loadImage(
-    "assets/images/watch.png"
+    "watch.png"
   );
 
 
   itemImages.tape = loadImage(
-    "assets/images/tape.png"
+    "tape.png"
   );
 
 
   itemImages.survivorNote = loadImage(
-    "assets/images/survivornote.png"
+    "survivornote.png"
   );
 
 
   itemImages.radio = loadImage(
-    "assets/images/radio.png"
+    "radio.png"
   );
 
 
   itemImages.notes = loadImage(
-    "assets/images/notes.png"
+    "notes.png"
   );
 
 
   itemImages.medkit = loadImage(
-    "assets/images/medki.png"
+    "medki.png"
   );
 
 
   itemImages.lighter = loadImage(
-    "assets/images/lighter.png"
+    "lighter.png"
   );
 
 
   itemImages.food = loadImage(
-    "assets/images/food.png"
+    "food.png"
   );
 
-  goodEndingImages[0] =
-  loadImage("assets/images/goodEnding1.png");
+  goodEndingImages[0] = loadImage("goodEnding1.png");
 
-goodEndingImages[1] =
-  loadImage("assets/images/goodEnding2.png");
+  goodEndingImages[1] = loadImage("goodEnding2.png");
 
-goodEndingImages[2] =
-  loadImage("assets/images/goodEnding3.png");
+  goodEndingImages[2] = loadImage("goodEnding3.png");
 
-goodEndingImages[3] =
-  loadImage("assets/images/goodEnding4.png");
+  goodEndingImages[3] = loadImage("goodEnding4.png");
 
-goodEndingImages[4] =
-  loadImage("assets/images/goodEnding5.png");
+  goodEndingImages[4] = loadImage("goodEnding5.png");
 
-goodEndingImages[5] =
-  loadImage("assets/images/goodEnding6.png");
+  goodEndingImages[5] = loadImage("goodEnding6.png");
 
 
   itemKeys = Object.keys(itemImages);
